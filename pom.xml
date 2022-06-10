@@ -36,7 +36,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			
-			<!-- <plugin>
+	<!--		 <plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>1.6.1</version>
@@ -53,7 +53,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin> -->
+			</plugin>-->
 		</plugins>
 		<finalName>Hello-world</finalName> 
 	</build>

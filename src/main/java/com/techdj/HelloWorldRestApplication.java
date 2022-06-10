@@ -18,10 +18,23 @@ public class HelloWorldRestApplication {
 		SpringApplication.run(HelloWorldRestApplication.class, args);
 	}
 
-@GetMapping("/hello")
-public String getHello(){
-	return "Hello World";
-	}
+	@GetMapping("/")
+	public String getHello1(){
+
+		String html = "<html>\n" +
+				"<head>\n" +
+				"<title>Spring Magic</title>\n" +
+				"</head>\n" +
+				"<body>\n" +
+				"\n" +
+				"<h1>Hi Dheerendra</h1>\n" +
+				"<p>Application deployed successfully </p>\n" +
+				"\n" +
+				"</body>\n" +
+				"</html>";
+		return html;
+			}
+
 
 @GetMapping("/{name}")
 public String getHello(@PathVariable String name){
