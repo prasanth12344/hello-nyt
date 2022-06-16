@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-	PATH = '/opt/maven/apache-maven-3.8.6/bin:$PATH'
+	PATH = '/usr/share/maven/bin:$PATH'
     DOCKERHUB_CREDENTIALS = credentials('docker-hub-prasanth12344')
     }
     stages { 
