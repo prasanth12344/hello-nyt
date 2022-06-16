@@ -1,8 +1,8 @@
 pipeline {
     agent any 
     environment {
-      PATH = '/usr/share/maven/bin:$PATH'
-      DOCKERHUB_CREDENTIALS = credentials('docker-hub-prasanth12344')
+	PATH = '/opt/maven/apache-maven-3.8.6/bin:$PATH'
+    DOCKERHUB_CREDENTIALS = credentials('docker-hub-prasanth12344')
     }
     stages { 
         stage('SCM Checkout') {
@@ -12,8 +12,9 @@ pipeline {
         }
 		
 		stage('Build') {
+		    withEnv(['PATH+EXTRA= '/usr/share/maven/bin:$PATH'])
             steps {  
-                sh ' mvn clean'
+                sh ' mvn clean package '
             }
         }
 
