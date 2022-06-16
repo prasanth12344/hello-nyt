@@ -12,7 +12,6 @@ pipeline {
         }
 		
 		stage('Build') {
-		    withEnv(['PATH+EXTRA= '/usr/share/maven/bin:$PATH'])
             steps {  
                 sh ' mvn clean package '
             }
