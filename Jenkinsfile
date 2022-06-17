@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-	PATH = '/opt/apache-maven-3.8.6/bin:$PATH
+	PATH = '/opt/maven/apache-maven-3.8.6/bin:$PATH'
     }
     stages { 
         stage('SCM Checkout') {
@@ -12,7 +12,7 @@ pipeline {
 		
 		stage('Build') {
             steps {  
-                sh " mvn clean "
+                sh ' mvn clean package '
             }
         }
 	}
