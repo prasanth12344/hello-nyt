@@ -1,5 +1,5 @@
 pipeline {
-	agent { java-build-node }
+	agent { label 'java-build-node' }
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
